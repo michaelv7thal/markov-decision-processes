@@ -1,0 +1,40 @@
+{
+  "name": "markov-decision-processes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive MDP visualizer monorepo",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "nx run frontend:dev",
+    "dev:backend": "uv run uvicorn backend.app.main:app --reload",
+    "dev:all": "nx run-many -t dev",
+    "build": "nx run frontend:build",
+    "build:all": "nx run-many -t build",
+    "start": "nx run frontend:start",
+    "lint": "nx run-many -t lint",
+    "lint:backend": "uv run ruff check backend/",
+    "format": "nx run-many -t format && uv run ruff format backend/",
+    "type-check": "nx run-many -t type-check",
+    "test": "nx run-many -t test",
+    "test:backend": "uv run pytest backend/tests",
+    "clean": "nx reset && rm -rf node_modules .nx",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "nx": "^19.0.0",
+    "@nx/workspace": "^19.0.0",
+    "@nx/next": "^19.0.0",
+    "prettier": "^3.1.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "nx": {
+    "includedScripts": []
+  }
+}

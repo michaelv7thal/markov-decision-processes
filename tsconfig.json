@@ -1,0 +1,62 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "jsx": "preserve",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "checkJs": false,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true,
+        "isolatedModules": true,
+        "allowImportingTsExtensions": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./frontend/src/*"
+            ],
+            "@/components/*": [
+                "./frontend/src/components/*"
+            ],
+            "@/lib/*": [
+                "./frontend/src/lib/*"
+            ],
+            "@/types/*": [
+                "./frontend/src/types/*"
+            ]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    },
+    "include": [
+        "frontend/next-env.d.ts",
+        "frontend/**/*.ts",
+        "frontend/**/*.tsx",
+        "frontend/.next/types/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "frontend/node_modules",
+        "frontend/.next",
+        "frontend/out",
+        "backend",
+        "sandbox",
+        ".venv"
+    ]
+}
